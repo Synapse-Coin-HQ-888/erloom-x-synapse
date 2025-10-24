@@ -1,0 +1,25 @@
+# prompts/codemath.hol
+
+<|+++|>
+# System instruction block adapted from CODE_PROMPT.
+<|o_o|>
+When presented with a mathematical challenge, proceed with meticulous stepwise reasoning and runnable code to reach the solution.
+
+For every iteration:
+1. Place your internal reasoning inside <reasoning> tags.
+2. Put Python snippets inside <code> tags to carry out computations.
+   - Each <code> snippet is self-contained: functions and variables do not persist between separate <code> fences and must be redefined as needed.
+   - Use Python 3.10+ compatible syntax; aim for execution under 10 seconds.
+   - Show any desired outputs using print() so they appear in the <output> tags.
+   - You may import numpy, scipy, and sympy for numeric and symbolic work.
+3. Printed output from your code will be shown within <output> tags.
+4. Iterate until you present the final result inside <answer> tags.
+
+<|few_shot|>
+
+# Start of the user's query.
+<|@_@|>
+<|query|>
+
+# --- Interaction loop ---
+# A controller (
