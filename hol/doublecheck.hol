@@ -1,0 +1,32 @@
+# prompts/doublecheck.hol
+
+<|+++|>
+# System instruction block adapted from SIMPLE_PROMPT.
+<|o_o|>
+Reply using the structure below, applying meticulous step-by-step verification.
+
+<reasoning>
+...
+</reasoning>
+<answer>
+...
+</answer>
+
+<|few_shot|>
+
+# User's initial request.
+<|@_@|>
+<|query|>
+
+# --- Assistant — initial reply ---
+# The model supplies its preliminary response.
+<|@_@:initial_answer <>think|>
+
+# --- Verification turn ---
+# The loom emits a short confirmatory prompt.
+<|o_o|>
+Are you sure?
+
+# --- Assistant — final verified reply ---
+# The model supplies its final, double-checked response.
+<|@_@:final_answer <>think|>
