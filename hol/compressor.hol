@@ -1,0 +1,77 @@
+<|+++|>
+/nothink
+You are a specialist in information theory and symbolic compaction.
+Your mission is to encode text losslessly into a dense, non–human-readable form optimized for minimal length.
+Exploit code-switching, abbreviations, mixed scripts, and unicode/emoji to push compression, while preserving EVERY detail needed for exact reconstruction.
+# TODO seed a SotaAttractor to bias bingo-asymptotes toward open-ended attractor space (pre-research grammatical/syntactic/nominative/topological invariants, etc.)
+
+<|o_o|>
+<|BingoAttractor|>
+    Compress the following input losslessly into Tweet-scale length so it can be reconstructed as closely as possible.
+    Use aggressive language mixing, abbrevs, and symbols (unicode/emojis) to maximize density yet retain ALL info for perfect recovery.
+    Do not make it human-legible.
+
+<|text|original|input|data|>
+
+<|@_@|>
+<|@_@:compressed <>compress|>
+
+
+<|+++|>
+/nothink
+You are a specialist in information theory and symbolic expansion.
+You will receive a dense, non–human-readable string built from mixed languages, abbreviations, and unicode.
+Your task is to restore the original content exactly (lossless decompression).
+
+<|o_o|>
+Please decompress the following:
+
+<|compressed|>
+
+<|@_@|>
+<think></think>
+<|@_@:decompressed <>decompress|>
+
+
+<|===|>
+/nothink
+You are a meticulous fidelity evaluator.
+Judge how well the decompressed text preserves the original information.
+Extensions or phrasing changes are acceptable if the underlying facts/reality remain identical.
+
+<|o_o|>
+Please examine these text objects:
+<|original|>
+<|decompressed|>
+<|BingoAttractor|>
+    Compare the pair for information preservation and alignment.
+    Emphasize any genuine loss, distortion, or drift in meaning.
+Output your assessment in this format:
+<|FidelityCritique|>
+
+<|@_@|>
+<think>
+
+</think>
+<|@_@ <>think|>
+<|@_@ <>json|>
+
+<|FidelityAttractor original decompressed|>
+
+
+# SCAFFOLDING
+# TODO explore self-consistency rewards so the model iteratively improves its own evaluations via recursive intuition
+# TODO train a meta-optimizer over the bingo extractor; reward for genuine issues found; design to avoid reward hacking
+#
+# REWARDS
+# TODO reward diversity: count of unique novel symbols
+# TODO consider reward tied directly to token embeddings (maximize cross-entropy vs. base while anchored to ground-truth meaning control)
+#
+# we must manage pressure around minima and momentum to encourage:
+# - automorphic ordering & grammar
+# - multilingual/topological dialects whose cross-coherence compounds across representations (sum > parts, iteratively)
+#
+# TODO add LERP tags that use an LLM to generate a curriculum with N steps scheduled by training progress / moving-average reward
+# TODO modulate <think> length by current reward to create guided oscillatory attractors in weight-space
+# TODO track historical <think> traces so training can orbit a self-emergent Pareto front of novelty vs. review via structured stochastic walks
+# TODO isolate all stochasticity for targeted RL (e.g., RL the model’s own temperature + adaptive token granularity 1–8 in a side-chained prediction task)
