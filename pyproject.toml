@@ -1,0 +1,94 @@
+[project]
+name = "Errloom"
+authors = [
+    { name = "Nicolas Martel" },
+]
+version = "0.1.1"
+description = "Errloom — a Swiss Army Knife for context synthesis, reinforcement learning, and loom-based development using large language models."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11,<3.13"
+keywords = [
+    "reinforcement-learning",
+    "llm",
+    "rl",
+    "grpo",
+    "prompt-engineering",
+    "verifiable-environments",
+    "multi-turn"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "rich",
+    "prompt_toolkit",
+    "requests>=2.32.3",
+    "openai>=1.81.0",
+    "torch==2.7.1",
+    "transformers",
+    "datasets>=3.6.0",
+    "opensimplex",
+    "opencv-python-headless",
+    "msgspec",
+    "asyncssh",
+    "desktop_notifier",
+    "aiofiles"
+]
+
+[project.optional-dependencies]
+all = [
+    "liger-kernel>=0.5.10",
+    "deepspeed",
+    "ipykernel",
+    "ipywidgets",
+    "duckduckgo-search",
+    "brave-search",
+    "reasoning-gym",
+    "smolagents>=1.15.0",
+    "textarena",
+    "nltk"
+]
+
+train = [
+    "vllm==0.10.0",
+    "flash-attn==2.8.2",
+    "accelerate",
+    "peft",
+    "wandb",
+    "trl>=0.17.0",
+]
+
+dev = [
+    "testslide",
+    "twine>=6.1.0",  # For publishing to PyPI
+]
+
+[project.scripts]
+main = "errloom.main:run"
+errl = "errloom.main:run"
+errl-vllm = "errloom.interop.vllm_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Homepage = "https://github.com/synapse-ai/errloom"
+Documentation = "https://github.com/synapse-ai/errloom"
+Repository = "https://github.com/synapse-ai/errloom.git"
+Issues = "https://github.com/synapse-ai/errloom/issues"
+
+[tool.uv]
+no-build-isolation-package = ['flash-attn']
+
+[tool.ruff.lint]
+ignore = ["E402"] # Ignore E402: module-level import not at top of file
